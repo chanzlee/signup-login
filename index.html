@@ -4,42 +4,45 @@
     <meta charset="utf-8">
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
     <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="https://epicenter.epicodus.com/assets/favicon-d0e8ff63da72a0c5ea15ebc045a7f9d2979d211a12e596a5ed5f5b1534e78919.png">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Bank Account</title>
+    <title>Epicollapse</title>
   </head>
   <body>
-    <div class="container signup">
+    <div class="container">
       <h1><img src="img/epi.png">Epicollapse</h1>
-      <form id="create-account">
-          <h2>Create New Account</h2>
-          <div class="form-group">
-            <label for="input-create-id">ID</label>
-            <input id="input-create-id" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="input-create-pw">PASSWORD</label>
-            <input id="input-create-pw" type="text" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-info">Sign Up</button><span id="login-link"> Do you already have an account?</span>
-      </form>
-    </div>
-    <div class="container login">
-      <form id="login-account">
-          <h2>Log In</h2>
-          <div class="form-group">
-            <label for="input-login-id">ID</label>
-            <input id="input-login-id" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="input-login-pw">PASSWORD</label>
-            <input id="input-login-pw" type="text" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-info">Log In</button><span id="signup-link"> Or you can sign up for free!</span>
-      </form>
-    </div>
-    <div class="result">
-      <p></p>
+      <div class="signup">
+        <form id="create-account">
+            <h2>Create New Account</h2>
+            <div class="form-group">
+              <label for="input-create-id">ID</label>
+              <input id="input-create-id" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="input-create-pw">PASSWORD</label>
+              <input id="input-create-pw" type="text" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-info">Sign Up</button><span id="login-link"> Do you already have an account?</span>
+        </form>
+      </div>
+      <div class="login">
+        <form id="login-account">
+            <h2>Log In</h2>
+            <div class="form-group">
+              <label for="input-login-id">ID</label>
+              <input id="input-login-id" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="input-login-pw">PASSWORD</label>
+              <input id="input-login-pw" type="text" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-info">Log In</button><span id="signup-link"> Or you can sign up for free!</span>
+        </form>
+      </div>
+      <div class="result">
+        <p></p>
+      </div>
     </div>
   </body>
 </html>

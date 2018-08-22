@@ -7,11 +7,7 @@ var Account = function (id, pw){
 }
 
 Account.prototype.validate= function(){
-  console.log(this.pw);
-  console.log(this.id);
-  console.log(this.id in accounts);
   if(this.id in accounts){
-    console.log(accounts[this.id].pw);
     if(this.pw === accounts[this.id].pw){
       return true;
     } else {
@@ -22,6 +18,15 @@ Account.prototype.validate= function(){
   }
 }
 
+//Just for preventing users to be able to log-out.
+var infinityWar= function (){
+  for (i=1; i<14,000,605; i++){
+    confirm("Dr. Strange watching timeline number "+i+" out of 14000605...");
+  }
+  alert("We are in the end-game now")
+}
+
+// Front-end/////////////////////////
 $(document).ready(function(){
   $("#create-account").submit(function(event){
     event.preventDefault();
@@ -34,7 +39,7 @@ $(document).ready(function(){
     } else {
       alert("Sign Up Successful");
       accounts[accountInstance.id]=accountInstance;
-      console.log(accounts);
+      $("#login-link").trigger("click");
     $("#create-account")[0].reset();
     }
   });
@@ -43,15 +48,13 @@ $(document).ready(function(){
     event.preventDefault();
     var idInput = $("#input-login-id").val();
     var pwInput = $("#input-login-pw").val();
-    console.log(idInput);
-    console.log(pwInput);
     var accountInstance = new Account(idInput,pwInput);
-    console.log(accounts);
-    console.log(accountInstance);
+
     if(accountInstance.validate()){
       currentlyLogIn = accountInstance;
-      // currentlyLogIn will be used later on
+      // currentlyLogIn will be used later on.
       alert("Log In Successful")
+      infinityWar();
     } else {
       alert("ID/Password does not match our records.")
     }
