@@ -10,3 +10,7 @@
 #login-link:hover, #signup-link:hover {
   text-decoration: underline;
 }
+
+img {
+  display: inline;
+}
