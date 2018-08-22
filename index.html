@@ -9,9 +9,9 @@
     <title>Bank Account</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container signup">
       <form id="create-account">
-          <h2>Create New Account<h2>
+          <h2>Create New Account</h2>
           <div class="form-group">
             <label for="input-create-id">ID</label>
             <input id="input-create-id" type="text" class="form-control">
@@ -20,8 +20,25 @@
             <label for="input-create-pw">PASSWORD</label>
             <input id="input-create-pw" type="text" class="form-control">
           </div>
-          <button type="submit" class="btn btn-info">Sign In</button>
+          <button type="submit" class="btn btn-info">Sign Up</button><span id="login-link"> Do you already have an account?</span>
       </form>
+    </div>
+    <div class="container login">
+      <form id="login-account">
+          <h2>Log In</h2>
+          <div class="form-group">
+            <label for="input-login-id">ID</label>
+            <input id="input-create-id" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="input-create-pw">PASSWORD</label>
+            <input id="input-login-pw" type="text" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-info">Log In</button><span id="signup-link"> Or you can sign up for free!</span>
+      </form>
+    </div>
+    <div class="result">
+      <p></p>
     </div>
   </body>
 </html>

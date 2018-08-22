@@ -1,0 +1,12 @@
+.login {
+  display: none;
+}
+
+#login-link, #signup-link {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+#login-link:hover, #signup-link:hover {
+  text-decoration: underline;
+}
