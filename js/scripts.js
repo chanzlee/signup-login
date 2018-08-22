@@ -21,7 +21,7 @@ Account.prototype.validate= function(){
 //Just for preventing users to be able to log-out.
 var infinityWar= function (){
   for (i=1; i<14,000,605; i++){
-    confirm("Dr. Strange watching timeline number "+i+" out of 14000605...");
+    confirm("Dr. Strange watching "+i+" out of 14000605 timelines...");
   }
   alert("We are in the end-game now")
 }
@@ -37,7 +37,7 @@ $(document).ready(function(){
     if(accountInstance.validate()){
       alert("ID is already in use");
     } else {
-      alert("Sign Up Successful");
+      alert("Sign Up Successfully");
       accounts[accountInstance.id]=accountInstance;
       $("#login-link").trigger("click");
     $("#create-account")[0].reset();
@@ -53,8 +53,10 @@ $(document).ready(function(){
     if(accountInstance.validate()){
       currentlyLogIn = accountInstance;
       // currentlyLogIn will be used later on.
-      alert("Log In Successful")
-      infinityWar();
+      alert("Log in successfully")
+      alert("Welcome to Infinity War")
+      $(".hidden").show();
+      setTimeout(function() { infinityWar(); }, 1000);
     } else {
       alert("ID/Password does not match our records.")
     }

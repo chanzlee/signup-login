@@ -25,3 +25,9 @@ h1 {
 button {
   float: right;
 }
+
+img.hidden {
+  display: none;
+  width: 100%;
+  height: auto;
+}
